@@ -116,8 +116,13 @@ for(let nx in school){
 }
 
 let obj2=[{name:"akash"},{name:"aaaa"},{name:"bbbb"}]
-let oo=obj2.filter(user=>user.name==="akash")
-console.log(oo)
+// let oo=obj2.filter(user=>user.name==="akash")
+// console.log(oo)
+
+for(let x of obj2){
+    if(x.name==="akash"){
+        console.log(x)
+    }
+}
 
 
-   
