@@ -103,7 +103,7 @@ console.log(obj.groups[0].members.map(item=>item.name))
 console.log(obj.groups[0].expenses[1].splitBetween[0].amount)
 
 
-const arr = [
+const product = [
     {
         productId: '123',
         productName: 'Laptop',
@@ -123,6 +123,16 @@ const arr = [
         productName: 'Tablet'
     }
 ]
+
+const grouped={}
+for(let item of product){
+  if(!grouped[item.productName]){
+    grouped[item.productName]=[]
+  }
+  grouped[item.productName].push(item)
+}
+console.log(grouped)
+
 
 // {
 //     'Smartphone': [
