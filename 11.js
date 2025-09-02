@@ -113,7 +113,7 @@ let employees = [
 const epm=employees.reduce((sum, emp)=>(sum+emp.salary),0)
 console.log(epm)
 
-
+ 
 
 let students = [
   { name: "Raj", score: 85 },
