@@ -176,3 +176,134 @@ console.log(count)
 
 const stud=studentss.filter(stud=>stud.score>=50).length
 console.log(stud)
+
+
+const arr=[1,"c",2,3,"z","a"]
+
+console.log(arr.sort())
+
+
+
+const stri="abcdefghi"
+const strig=stri.split("").reverse().join()
+console.log(strig)
+
+
+let peop = [
+  { name: "A", city: "Delhi" },
+  { name: "B", city: "Mumbai" },
+  { name: "C", city: "Delhi" },
+  { name: "D", city: "Mumbai" }
+];
+// Expected Output:
+// {
+//   Delhi: [{ name: "A", city: "Delhi" }, { name: "C", city: "Delhi" }],
+//   Mumbai: [{ name: "B", city: "Mumbai" }, { name: "D", city: "Mumbai" }]
+// }
+
+let grp={}
+for(let item of peop){
+  if(!grp[item.city]){
+    grp[item.city]=[]
+  }
+  grp[item.city].push(item)
+}
+console.log(grp)
+
+
+let employeeso = [
+  { name: "A", salary: 3000 },
+  { name: "B", salary: 4000 },
+  { name: "C", salary: 5000 }
+];
+
+// total salary 
+//[=>400]
+
+const emp=employeeso.reduce((sum,emp)=>(sum+emp.salary),0)
+console.log(emp)
+
+const empl=employeeso.filter(item=>item.salary>=4000).map(item=>item.name)
+console.log(empl)
+
+
+
+// Q1: Write a function to reverse the words in a given sentence without reversing the characters of
+//  each word. Example: "I love JavaScript" → "JavaScript love I".
+
+
+const text="I Love Javascript"
+
+const text1=text.split(' ').reverse().join(' ')
+console.log(text1)
+
+
+function reverseWords() {
+   const sentence="I Love Javascript"
+    const words = sentence.split(' ');
+
+    const reversedWords = words.reverse();
+
+    const reversedSentence = reversedWords.join(' ');
+    console.log(reversedSentence)
+
+}
+reverseWords()
+
+
+
+// 2. Find Unique Elements in Array
+// Q2: Given an array [1, 2, 2, 3, 4, 4, 5], return an array of unique elements.
+
+const arrs=[1, 2, 2, 3, 4, 4, 5]
+
+const arry=arrs.filter((item, index)=>arrs.indexOf(item)===lastIndexOf())
+
+
+
+// Q4: Flatten an array without using flat().
+//  Example: [1, [2, [3, 4], 5]] → [1, 2, 3, 4, 5]
+
+const arra=[1, [2, [3, 4], 5]] 
+
+let result=[]
+
+for(let item of arra){
+  if(Array.isArray(item)){
+    result.push(...item)
+  }else{
+    result.push(item)
+  }
+}
+console.log(result)
+
+
+// Q10: Remove duplicate objects by id.
+//  Input:
+// [
+//   {id:1, name:"A"}, 
+//   {id:2, name:"B"}, 
+//   {id:1, name:"C"}
+// ]
+
+const dataa= [
+  {id:1, name:"A"}, 
+  {id:2, name:"B"}, 
+  {id:1, name:"C"}
+]
+
+const unique=[]
+const sameId=new Set()
+
+for(let item of dataa){
+   if (!sameId.has(item.id)) {
+    sameId.add(item.id);
+    unique.push(item);
+  }
+}
+console.log(unique)
+
+
+
+
+
